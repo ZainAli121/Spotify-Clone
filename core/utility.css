@@ -39,3 +39,16 @@
 .p-1{
     padding: 10px;
 }
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #333; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555; 
+    border-radius: 5px;
+}

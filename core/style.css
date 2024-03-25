@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
 *{
     margin: 0;
     padding: 0;
@@ -19,6 +18,7 @@ body{
 .right{
     width: 75vw;
     margin: 11px 0;
+    max-height: 100vh;
 }
 
 .home ul li{
@@ -40,7 +40,6 @@ body{
     width: 100%;
     gap: 14px;
     padding-top: 18px;
-    /* font-weight: bold; */
     font-size: 10px;
 }
 
@@ -55,6 +54,7 @@ body{
     color: grey;
     position: absolute;
     bottom: 0;
+    padding: 20px 2px;
 
 }
 .footer a{
@@ -67,9 +67,100 @@ body{
 .header{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(21 20 20);
+    align-items: center;
+    background-color: rgba(52, 49, 49, 0.244);
+    height: 70px;
 }
 
 .header > *{
     padding: 20px;
+}
+
+.signupBtn{
+    background-color: rgba(52, 49, 49, 0.244);
+    cursor: pointer;
+    color:rgba(255, 255, 255, 0.79);
+    margin-right: 2vmax;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.signupBtn:hover{
+    font-size: 17px;
+    color: white;
+}
+
+.loginBtn{
+    background-color: white;
+    padding: 18px;
+    border-radius: 30px;
+    width: 125px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.loginBtn:hover{
+    background-color: rgba(255, 255, 255, 0.911);
+    padding: 19px;
+    font-size: 17px;
+}
+
+.playlists{
+    padding: 16px;
+}
+
+.cardContainer{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 30px;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.card{
+    width: 200px;
+    padding: 10px;
+    background-color: #252525;
+    border-radius: 7px;
+    position: relative;
+}
+
+.card > *{
+    padding-top: 3px;
+}
+
+.card img{
+    width:100%;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+.play{
+        width: 28px;
+        height: 28px; 
+        padding: 10px; 
+        background-color: #1ed760;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 15px;
+        top: 230px;
+        opacity: 0;
+        transition: all ease-out 0.2s;
+}
+
+.card:hover{
+    .play{
+        opacity: 1;
+        top: 200px;
+    }
 }
