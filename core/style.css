@@ -19,6 +19,7 @@ body{
     width: 75vw;
     margin: 11px 0;
     max-height: 100vh;
+    position: relative;
 }
 
 .home ul li{
@@ -163,4 +164,60 @@ body{
         opacity: 1;
         top: 200px;
     }
+}
+
+.playBar{
+    position: absolute;
+    bottom: 0;
+    background-color: #1ed760;
+    width: 88%;
+    padding: 12px;
+}
+
+.playButtons{
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+
+.songList ul{
+    padding: 20px;
+}
+
+.songList ul li{
+    
+    list-style: decimal;
+    display: flex;
+    width: 267px;
+    gap: 30px;
+    padding: 12px 0;
+    border: 2px solid rgb(138, 137, 137);
+    margin: 0.7vmax 0 0 0;
+    border-radius: 5px;
+}
+
+.songList ul li>img{
+    width: 20px;
+}
+
+.info div{
+    
+    width: 7vmax;
+}
+
+.playNow{
+    display: flex;
+}
+
+.playNow span{
+    padding: 0.7vmax;
+    justify-content: center;
+    align-items: center;
+    width: 4.5vmax;
+    font-size: 0.8rem;
+    
+}
+
+.playNow img{
+    width: 20px;
 }
