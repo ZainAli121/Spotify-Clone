@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
 </head>
@@ -28,7 +29,7 @@
 
                 <div class="songList">
                     <ul>
-                        <li>
+                        <!-- <li>
                             <img src="/images/music.svg" alt="">
                             <div class="info">
                                 <div>Song Name</div>
@@ -38,7 +39,7 @@
                                 <span>Play Now</span>
                                 <img class="invert" src="play.svg" alt="">
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
 
@@ -109,17 +110,21 @@
                 </div>
 
                 <div class="playBar">
-                    <div class="songInfo">
+                    <div class="playBar-inner">
+                        <div class="songInfo"></div>
+                        <div class="playButtons">
+                            <img id="previous" src="prevsong.svg" alt="">
+                            <img id="play" src="play.svg" alt="">
+                            <img id="next" src="nextSong.svg" alt="">
+                        </div>
+                        <div class="songTime"></div>
+                    </div>  
+                    <div class="seekBar">
+                        <div class="circle">
 
+                        </div>
                     </div>
-                    <div class="playButtons">
-                        <img src="prevsong.svg" alt="">
-                        <img src="play.svg" alt="">
-                        <img src="nextSong.svg" alt="">
-                    </div>
-                    <div class="songTime">
-                        
-                    </div>
+
                 </div>
             </div>
         </div>

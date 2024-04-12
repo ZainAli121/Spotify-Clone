@@ -168,10 +168,30 @@ body{
 
 .playBar{
     position: absolute;
-    bottom: 0;
-    background-color: #1ed760;
+    /* bottom: 0; */
+    background-color: #58605b;
+    border-radius: 20px;
     width: 88%;
     padding: 12px;
+}
+
+.seekBar{
+    background-color: rgb(193, 188, 188);
+    width: 100%;
+    height: 4px;
+    margin-top: 10px;
+    
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    top: -6px;
+    left: 0%;
+    transition: left 0.5s;
 }
 
 .playButtons{
@@ -180,20 +200,38 @@ body{
     gap: 22px;
 }
 
+.playButtons img{
+    cursor: pointer;
+}
+
+.playBar-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+#play{
+    transition: all 3s;
+}
+
+.songList{
+    height: 300px;
+    overflow-y: scroll;
+}
+
 .songList ul{
-    padding: 20px;
+    padding: 10px;
 }
 
 .songList ul li{
-    
     list-style: decimal;
     display: flex;
-    width: 267px;
-    gap: 30px;
+    justify-content: space-between;
+    width: 265px;
+    gap: 10px;
     padding: 12px 0;
     border: 2px solid rgb(138, 137, 137);
     margin: 0.7vmax 0 0 0;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .songList ul li>img{
@@ -201,12 +239,15 @@ body{
 }
 
 .info div{
-    
-    width: 7vmax;
+    width: 13vmax;
+    font-size: 12px;
 }
 
 .playNow{
+    width: 64px;
     display: flex;
+    left: -15px;
+    position: relative;
 }
 
 .playNow span{
@@ -214,10 +255,10 @@ body{
     justify-content: center;
     align-items: center;
     width: 4.5vmax;
-    font-size: 0.8rem;
+    font-size: 0.54rem;
     
 }
 
 .playNow img{
-    width: 20px;
+    width: 10px;
 }
