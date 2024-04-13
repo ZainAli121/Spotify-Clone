@@ -37,11 +37,13 @@ async function getSongs() {
 }
 
 // play Music
-const playMusic = (track)=>{
+const playMusic = (track, pause=false)=>{
    current_track.src = "/Naats/"+track
-    current_track.play()
-    play.style.width = "13px";
-    play.src = "/images/pause.svg"
+   if (!pause) {
+       current_track.play()
+       play.src = "/images/pause.svg"
+    }
+    play.style.width = "12px";
 
     document.querySelector(".songInfo").innerHTML = track
     document.querySelector(".songTime").innerHTML = "00:00 / 00:00"
@@ -51,6 +53,7 @@ const playMusic = (track)=>{
 async function main() {
     // get list of all songs
     let songs = await getSongs()
+    playMusic(songs[0], true)
 
     // dom
     let songUl = document.querySelector(".songList").getElementsByTagName("ul")[0]
@@ -92,10 +95,16 @@ async function main() {
 
     // event listener for tracking music's time 
     current_track.addEventListener("timeupdate", ()=>{
-        console.log(convertSecondsToMinutesSeconds(current_track.duration))
         document.querySelector(".songTime").innerHTML = `${convertSecondsToMinutesSeconds(current_track.currentTime)} / ${convertSecondsToMinutesSeconds(current_track.duration)}`
+        document.querySelector(".circle").style.left = (current_track.currentTime / current_track.duration) * 100 +"%"
     })
 
+    // add event listener to move seekbar 
+    document.querySelector(".seekBar").addEventListener("click", e=>{
+        let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
+        document.querySelector(".circle").style.left = percent + "%";
+        current_track.currentTime = ((current_track.duration) * percent) /100;
+    })
 }
 
 main()
