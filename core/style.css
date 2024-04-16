@@ -1,28 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
     background-color: black;
     color: white;
 }
-.left{
+
+.left {
     width: 25vw;
     padding: 5px;
 }
 
-.right{
+.right {
     width: 75vw;
     margin: 11px 0;
     max-height: 100vh;
     position: relative;
 }
 
-.home ul li{
+.home ul li {
     display: flex;
     list-style: none;
     width: 20px;
@@ -31,12 +32,22 @@ body{
     font-weight: bold;
 }
 
-.library{
+.crossCont {
+    gap: 230px;
+}
+
+.cross {
+    display: none;
+
+}
+
+
+.library {
     min-height: 80vh;
     position: relative;
 }
 
-.heading{
+.heading {
     display: flex;
     width: 100%;
     gap: 14px;
@@ -44,11 +55,11 @@ body{
     font-size: 10px;
 }
 
-.heading img{
+.heading img {
     width: 25px;
 }
 
-.footer{
+.footer {
     display: flex;
     gap: 13px;
     font-size: 10px;
@@ -58,14 +69,13 @@ body{
     padding: 20px 2px;
 
 }
-.footer a{
+
+.footer a {
     color: grey;
     text-decoration: none;
 }
 
-
-
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,14 +83,26 @@ body{
     height: 70px;
 }
 
-.header > *{
+.header>* {
     padding: 20px;
 }
 
-.signupBtn{
+.hamburger {
+    display: none;
+    width: 30px;
+}
+
+.hamBurgerCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.signupBtn {
     background-color: rgba(52, 49, 49, 0.244);
     cursor: pointer;
-    color:rgba(255, 255, 255, 0.79);
+    color: rgba(255, 255, 255, 0.79);
     margin-right: 2vmax;
     padding: 10px;
     border: none;
@@ -90,12 +112,12 @@ body{
     font-size: 16px;
 }
 
-.signupBtn:hover{
+.signupBtn:hover {
     font-size: 17px;
     color: white;
 }
 
-.loginBtn{
+.loginBtn {
     background-color: white;
     padding: 18px;
     border-radius: 30px;
@@ -106,26 +128,26 @@ body{
     font-size: 16px;
 }
 
-.loginBtn:hover{
+.loginBtn:hover {
     background-color: rgba(255, 255, 255, 0.911);
     padding: 19px;
     font-size: 17px;
 }
 
-.playlists{
+.playlists {
     padding: 16px;
 }
 
-.cardContainer{
+.cardContainer {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
     margin: 30px;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 70vh;
 }
 
-.card{
+.card {
     width: 200px;
     padding: 10px;
     background-color: #252525;
@@ -133,40 +155,40 @@ body{
     position: relative;
 }
 
-.card > *{
+.card>* {
     padding-top: 3px;
 }
 
-.card img{
-    width:100%;
+.card img {
+    width: 100%;
     object-fit: contain;
     border-radius: 7px;
 }
 
-.play{
-        width: 28px;
-        height: 28px; 
-        padding: 10px; 
-        background-color: #1ed760;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        right: 15px;
-        top: 230px;
-        opacity: 0;
-        transition: all ease-out 0.2s;
+.play {
+    width: 28px;
+    height: 28px;
+    padding: 10px;
+    background-color: #1ed760;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 15px;
+    top: 230px;
+    opacity: 0;
+    transition: all ease-out 0.2s;
 }
 
-.card:hover{
-    .play{
+.card:hover {
+    .play {
         opacity: 1;
         top: 200px;
     }
 }
 
-.playBar{
+.playBar {
     position: absolute;
     /* bottom: 0; */
     background-color: #58605b;
@@ -175,17 +197,17 @@ body{
     padding: 12px;
 }
 
-.seekBar{
+.seekBar {
     background-color: rgb(193, 188, 188);
     width: 100%;
     height: 7px;
     margin-top: 10px;
     cursor: pointer;
     border-radius: 12px;
-    
+
 }
 
-.circle{
+.circle {
     width: 15px;
     height: 15px;
     background-color: white;
@@ -196,39 +218,39 @@ body{
     transition: left 0.5s;
 }
 
-.playButtons{
+.playButtons {
     display: flex;
     justify-content: center;
     gap: 22px;
 }
 
-.playButtons img{
+.playButtons img {
     cursor: pointer;
 }
 
-.playBar-inner{
+.playBar-inner {
     display: flex;
     justify-content: space-between;
 }
 
-#play{
+#play {
     transition: all 3s;
 }
 
-.songList{
+.songList {
     height: 300px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
-.songList ul{
+.songList ul {
     padding: 10px;
 }
 
-.songList ul li{
+.songList ul li {
     list-style: decimal;
     display: flex;
     justify-content: space-between;
-    width: 265px;
+    width: 276px;
     gap: 10px;
     padding: 12px 0;
     border: 2px solid rgb(138, 137, 137);
@@ -236,31 +258,87 @@ body{
     border-radius: 10px;
 }
 
-.songList ul li>img{
+.songList ul li>img {
     width: 20px;
 }
 
-.info div{
-    width: 13vmax;
+.info div {
+    width: 12vmax;
     font-size: 12px;
 }
 
-.playNow{
-    width: 64px;
+.playNow {
+    width: 71px;
     display: flex;
-    left: -15px;
     position: relative;
 }
 
-.playNow span{
-    padding: 0.7vmax;
+.playNow span {
+    padding: 9px;
     justify-content: center;
     align-items: center;
-    width: 4.5vmax;
+    width: 36px;
     font-size: 0.54rem;
-    
+
 }
 
-.playNow img{
+.playNow img {
     width: 10px;
+}
+
+
+@media (max-width: 1200px) {
+    .left {
+        position: absolute;
+        left: -100%;
+        transition: all 0.5s;
+        z-index: 1;
+        width: 370px;
+        background-color: black;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .cross {
+        display: block;
+        cursor: pointer;
+    }
+
+    .buttons * {
+        font-size: 13px;
+    }
+
+    .loginBtn {
+        padding: 10px;
+        width: 75px;
+    }
+
+    .loginBtn:hover {
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    .signupBtn:hover {
+        font-size: 13.5px;
+    }
+
+    .info div {
+        width: 160px;
+        font-size: 12px;
+    }
+
+    .playBar {
+        width: 70vw;
+    }
+
+    .seekBar{
+        width: 90%;
+    }
 }

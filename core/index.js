@@ -105,6 +105,16 @@ async function main() {
         document.querySelector(".circle").style.left = percent + "%";
         current_track.currentTime = ((current_track.duration) * percent) /100;
     })
+
+    // add event listener to hamburger
+    document.querySelector(".hamburger").addEventListener("click", ()=>{
+        document.querySelector(".left").style.left = 0;
+    })
+
+    // add event listener on cross button
+    document.querySelector(".cross").addEventListener("click", ()=>{
+        document.querySelector(".left").style.left = -100+"%";
+    })
 }
 
 main()
