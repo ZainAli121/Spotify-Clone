@@ -222,6 +222,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 22px;
+    left: -15px;
+    position: relative;
 }
 
 .playButtons img {
@@ -335,10 +337,48 @@ body {
     }
 
     .playBar {
-        width: 70vw;
+        width: calc(100vw - 60px);
     }
 
     .seekBar{
-        width: 90%;
+        width:calc(100vw - 60px);
     }
+
+    .cardContainer{
+        margin: 30px 0 30px 0;
+        justify-content: center;
+    }
+
+    .right{
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width:650px) {
+    .songInfo, .songTime{
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width:530px) {
+    .playButtons {
+        gap: 10px;
+        left: 0px;
+        position: relative;
+    }
+}
+
+@media (max-width:570px) {
+    .card {
+        width: 80vw;
+    }
+
+    .card:hover {
+        .play {
+            top: 86vw;
+        }
+    }
+    
 }
