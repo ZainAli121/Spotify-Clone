@@ -1,5 +1,6 @@
 // current track to be played
 let current_track = new Audio();
+let songs;
 
 function convertSecondsToMinutesSeconds(seconds) {
     // Calculate total minutes and remaining seconds
@@ -52,7 +53,7 @@ const playMusic = (track, pause=false)=>{
 
 async function main() {
     // get list of all songs
-    let songs = await getSongs()
+    songs = await getSongs()
     playMusic(songs[0], true)
 
     // dom
@@ -114,6 +115,26 @@ async function main() {
     // add event listener on cross button
     document.querySelector(".cross").addEventListener("click", ()=>{
         document.querySelector(".left").style.left = -100+"%";
+    })
+
+    // add event listener to next for playing next song
+    next.addEventListener("click", ()=>{
+        // calculate the index of current song
+        let index = songs.indexOf(current_track.src.split("/")[4]);
+        // if the next index is in range, play the song
+        if((index+1) < songs.length){
+            playMusic(songs[index+1])
+        }
+    })
+
+    // add event listener to prev for playing prev song
+    previous.addEventListener("click", ()=>{
+        // calculate the index of current song
+        let index = songs.indexOf(current_track.src.split("/")[4]);
+        // if the prev song is in range, play the song 
+        if((index-1) >= 0){
+            playMusic(songs[index-1])
+        }
     })
 }
 
