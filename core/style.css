@@ -178,10 +178,12 @@ body {
     right: 15px;
     top: 230px;
     opacity: 0;
-    transition: all ease-out 0.2s;
+    transition: all ease-out 0.4s;
 }
 
 .card:hover {
+    cursor: pointer;
+    background-color: #58605b;
     .play {
         opacity: 1;
         top: 200px;
@@ -190,7 +192,6 @@ body {
 
 .playBar {
     position: absolute;
-    /* bottom: 0; */
     background-color: #58605b;
     border-radius: 20px;
     width: 88%;
@@ -245,8 +246,10 @@ body {
 }
 
 .volume{
-    background-color: white;
-    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 12px;
 }
 
 .songList {
@@ -365,6 +368,16 @@ body {
         margin-top: 0;
     }
 
+    .card{
+        width: 40vw;
+    }
+
+    .card:hover {
+        .play {
+            top: 40vw;
+        }
+    }
+
     
 }
 
@@ -379,7 +392,7 @@ body {
 
     .card:hover {
         .play {
-            top: 86vw;
+            top: 80vw;
         }
     }
 
@@ -387,6 +400,11 @@ body {
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        gap: 10px;
+    }
+
+    .volume{
+        flex-direction: column;
         gap: 10px;
     }
     
